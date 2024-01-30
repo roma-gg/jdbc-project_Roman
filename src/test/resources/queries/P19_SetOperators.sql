@@ -1,0 +1,20 @@
+select * from EMPLOYEES;
+
+select * from DEPARTMENTS;
+
+select DEPARTMENT_ID from EMPLOYEES
+union
+select DEPARTMENT_ID from DEPARTMENTS;
+
+select DEPARTMENT_ID from DEPARTMENTS
+minus
+select DEPARTMENT_ID from EMPLOYEES;
+
+select DEPARTMENT_ID from EMPLOYEES
+minus
+select DEPARTMENT_ID from DEPARTMENTS;
+
+select DEPARTMENT_ID from DEPARTMENTS
+intersect
+select DEPARTMENT_ID from EMPLOYEES;
+
